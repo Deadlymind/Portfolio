@@ -1,10 +1,25 @@
-import ThemeToggler from "./ThemeToggler"
+'use client';
+import React, { useState, useEffect } from "react";
+
+// components
+import Logo from "./Logo";
+import ThemeToggler from "./ThemeToggler";
 
 const Header = () => {
 
     return (
         <header>
-            <ThemeToggler />
+            <div className="container mx-auto"></div>
+            <div className="flex justify-between items-center" >
+                <Logo />
+                <div>
+                    {/* nav */}
+                    <Nav />
+                    <ThemeToggler />
+                </div>
+
+            </div>
+
         </header>
     )
 }
