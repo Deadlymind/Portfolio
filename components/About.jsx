@@ -38,8 +38,8 @@ const qualificationsData = [
         title: 'education',
         data: [
             {
-                university: 'online harvard university',
-                qualification: 'CS50',
+                university: 'Online harvard university',
+                qualification: 'Computer Science 50',
                 years: '2018 - 2019',
             },
             {
@@ -76,13 +76,10 @@ const qualificationsData = [
     }
 ];
 
-const skillsData = [
+const skillData = [
     {
         title: 'Skills',
         data: [
-            {
-                name: 'HTML, CSS',
-            },
             {
                 name: 'Back-End Development',
             },
@@ -99,22 +96,37 @@ const skillsData = [
         ]
     },
     {
-        title: 'ToolsimgPath',
+        title: 'tools',
         data: [
             {
-                imgPath: '/about/vscode.svg',
-            },
-            {
-                imgPath: '/about/ajax.svg',
-            },
-            {
-                imgPath: '/about/css.svg',
+                imgPath: '/about/python.svg',
             },
             {
                 imgPath: '/about/django.svg',
             },
             {
-                imgPath: '/about/docker.svg',
+                imgPath: '/about/javascript.svg',
+            },
+            {
+                imgPath: '/about/react.svg',
+            },
+            {
+                imgPath: '/about/html.svg',
+            },
+            {
+                imgPath: '/about/css.svg',
+            },
+            {
+                imgPath: '/about/bootstrap.svg',
+            },
+            {
+                imgPath: '/about/tailwindcss.svg',
+            },
+            {
+                imgPath: '/about/ajax.svg',
+            },
+            {
+                imgPath: '/about/jquery.svg',
             },
             {
                 imgPath: '/about/git.svg',
@@ -123,35 +135,22 @@ const skillsData = [
                 imgPath: '/about/github.svg',
             },
             {
-                imgPath: '/about/html.svg',
-            },
-            {
-                imgPath: '/about/javascript.svg',
-            },
-            {
-                imgPath: '/about/jquery.svg',
-            },
-            {
                 imgPath: '/about/linux.svg',
             },
             {
                 imgPath: '/about/postgresql.svg',
             },
             {
-                imgPath: '/about/python.svg',
+                imgPath: '/about/sqlite.svg',
             },
             {
-                imgPath: '/about/react.svg',
+                imgPath: '/about/docker.svg',
             },
             {
                 imgPath: '/about/redis.svg',
             },
-            {
-                imgPath: '/about/tailwindcss.svg',
-            },
-            {
-                imgPath: '/about/sqlite.svg',
-            },
+
+
 
 
         ]
@@ -220,33 +219,6 @@ const About = () => {
                                     <h3 className="h3 mb-8 text-center xl:text-left " >My Awesome Journey</h3>
                                     {/* experience & education wrapper */}
                                     <div className="grid md:grid-cols-2 gap-y-8 " >
-                                        {/* experience */}
-                                        <div className="flex flex-col gap-y-6 ml-2 " >
-                                            <div className="flex items-center gap-x-4 text-[22px] text-primary " >
-                                                <Briefcase />
-                                                <h4 className="capitalize font-medium" >
-                                                    {getData(qualificationsData,'experience').title}
-                                                </h4>
-                                            </div>
-                                            {/* list*/}
-                                            <div className="flex flex-col gap-y-8" >
-                                                {getData(qualificationsData,'experience').data.map((item, index) => {
-                                                    const {company, role, years} = item;
-                                                    return (
-                                                        <div className="flex gap-x-8 group " key={index} >
-                                                            <div className="h-[84px] w-[1px] bg-border relative ml-2 " >
-                                                                <div className="w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] group-hover:translate-y-[84px] transition-all duration-500 " ></div>
-                                                            </div>
-                                                            <div>
-                                                                <div className="font-semibold text-xl leading-none mb-2  " >{company}</div>
-                                                                <div className="text-lg leading-none text-muted-foreground mb-4 " >{role}</div>
-                                                                <div className="text-base font-medium" >{years}</div>
-                                                            </div>
-                                                        </div>
-                                                    )
-                                                })}
-                                            </div>
-                                        </div>
                                         {/* education */}
                                         <div className="flex flex-col gap-y-6 ml-2 " >
                                             <div className="flex items-center gap-x-4 text-[22px] text-primary " >
@@ -274,11 +246,81 @@ const About = () => {
                                                 })}
                                             </div>
                                         </div>
+                                        {/* experience */}
+                                        <div className="flex flex-col gap-y-6 ml-2 " >
+                                            <div className="flex items-center gap-x-4 text-[22px] text-primary " >
+                                                <Briefcase />
+                                                <h4 className="capitalize font-medium" >
+                                                    {getData(qualificationsData,'experience').title}
+                                                </h4>
+                                            </div>
+                                            {/* list*/}
+                                            <div className="flex flex-col gap-y-8" >
+                                                {getData(qualificationsData,'experience').data.map((item, index) => {
+                                                    const {company, role, years} = item;
+                                                    return (
+                                                        <div className="flex gap-x-8 group " key={index} >
+                                                            <div className="h-[84px] w-[1px] bg-border relative ml-2 " >
+                                                                <div className="w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] group-hover:translate-y-[84px] transition-all duration-500 " ></div>
+                                                            </div>
+                                                            <div>
+                                                                <div className="font-semibold text-xl leading-none mb-2  " >{company}</div>
+                                                                <div className="text-lg leading-none text-muted-foreground mb-4 " >{role}</div>
+                                                                <div className="text-base font-medium" >{years}</div>
+                                                            </div>
+                                                        </div>
+                                                    )
+                                                })}
+                                            </div>
+                                        </div>
+
                                     </div>
                                 </div>
                             </TabsContent>
                             {/* skills */}
-                            <TabsContent value='skills'>Skills</TabsContent>
+                            <TabsContent value='skills'>
+                                <div className="text-center xl:text-left " >
+                                    <h3 className="h3 mb-8 " >Tools I Can Use</h3>
+                                    {/* skills */}
+                                    <div className="mb-16" >
+                                        <h4 className="text-xl font-semibold mb-2" >Skills</h4>
+                                        <div className="border-b border-border mb-4" ></div>
+                                        {/* skill list */}
+                                        <div>
+                                            {getData(skillData,'Skills').data.map((item, index) => {
+                                                const { name } = item;
+                                                return (
+                                                    <div className="w-2/4 text-center xl:text-left mx-auto xl:mx-0 " key={index} >
+                                                        <div className="font-medium" >{name}</div>
+                                                    </div>
+                                                )
+                                            })}
+                                        </div>
+                                    </div>
+                                    {/* Tools */}
+                                    <div>
+                                        <h4 className="text-xl font-semibold mb-2 xl:text-left "   >Tools</h4>
+                                        <div className="border-b border-border mb-4" ></div>
+                                        {/* tools list */}
+                                        <div className="flex flex-wrap  gap-2 justify-center xl:justify-start" >
+                                            {getData(skillData,'tools').data.map((item, index) => {
+                                                const { imgPath } = item;
+                                                return (
+                                                    <div key={index} >
+                                                        <Image
+                                                            src={imgPath}
+                                                            alt=""
+                                                            width={48}
+                                                            height={48}
+                                                            priority
+                                                        />
+                                                    </div>
+                                                )
+                                            })}
+                                        </div>
+                                    </div>
+                                </div>
+                            </TabsContent>
                         </div>
                     </Tabs>
                 </div>
