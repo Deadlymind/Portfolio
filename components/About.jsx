@@ -10,24 +10,25 @@ const infoData = [
         text: 'Oussama Ayari',
     },
     {
+        icon: <PhoneCall size={20} />,
+        text: '+216 55 952 585',
+    },
+    {
         icon: <MailIcon size={20} />,
         text: 'oussamaayari2014@gmail.com',
     },
+
     {
-        icon: <HomeIcon size={20} />,
-        text: 'Tunis, Ariana : Mnihla',
-    },
-    {
-        icon: <PhoneCall size={20} />,
-        text: '+216 55 952 585',
+        icon: <Calendar size={20} />,
+        text: 'Born on september 1998',
     },
     {
         icon: <GraduationCap size={20} />,
         text: 'Software developer',
     },
     {
-        icon: <Calendar size={20} />,
-        text: 'Born on september 1998',
+        icon: <HomeIcon size={20} />,
+        text: 'Tunis, Ariana : Mnihla',
     },
 
 ];
@@ -190,11 +191,11 @@ const About = () => {
                                         captivating users with exceptional and transformative digital experiences
                                     </p>
                                     {/* icons */}
-                                    <div>
+                                    <div className="grid xl:grid-cols-2 gap-4 mb-12 " >
                                         {infoData.map((item, index) => {
                                             return (
-                                                <div key={index} >
-                                                    <div>{item.icon}</div>
+                                                <div className="flex items-center gap-x-4 mx-auto xl:mx-0 " key={index} >
+                                                    <div className="text-primary" >{item.icon}</div>
                                                     <div>{item.text}</div>
                                                 </div>
                                             );
