@@ -5,17 +5,17 @@ const servicesData = [
     {
         icon: <GanttChartSquare size={72} strokeWidth={0.8} />,
         title: 'Back-End Development',
-        description: 'Leveraging Django, I craft the core of web applications with an emphasis on robust databases, secure APIs, and scalable architecture. My approach accelerates development with Django`s efficient management tools, ensuring your backend is not just powerful but also future-proof.',
+        description: 'Expert in Django for robust, scalable back-ends. Streamlines development with secure, efficient databases and APIs',
     },
     {
         icon: <Blocks size={72} strokeWidth={0.8} />,
         title: 'Front-End Development',
-        description: ' specialize in React to create responsive and intuitive user interfaces. With a focus on component-based architecture and efficient state management, I ensure your web application is both beautiful and performant, delivering an outstanding user experience.',
+        description: 'Specializes in React for dynamic, responsive UIs. Emphasizes performance, user experience, and modern web standards.',
     },
     {
         icon: <EarthLock size={72} strokeWidth={0.8} />,
         title: 'Web Security',
-        description: 'My focus on web security integrates secure coding, data protection, and threat mitigation to protect your applications. By prioritizing security from the ground up, I ensure your web presence is safeguarded against evolving digital threats, maintaining user trust.',
+        description: 'Focuses on advanced security strategies to protect web applications. Ensures integrity and trust with proactive defenses.',
     },
 ]
 
