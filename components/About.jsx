@@ -64,7 +64,7 @@ const qualificationsData = [
         data: [
             {
                 company: 'Potato Academy',
-                role: 'Founder, SEO and Developer',
+                role: 'Founder, CEO and Tech Lead',
                 years: '2024 - present',
             },
             {
@@ -163,15 +163,15 @@ const About = () => {
     };
 
     return (
-        <section className="xl:h-[860px] pb-12 xl:py-24">
+        <section className="container mx-auto xl:h-[860px] pb-12 xl:py-24  ">
             <div className="container mx-auto">
                 <h2 className="section-title mb-8 xl:mb-16 text-center mx-auto">About me</h2>
             </div>
-            <div className="flex flex-col xl:flex-row">
+            <div className="flex flex-col xl:flex-row ">
                 {/* image */}
                 <div className="hidden xl:flex flex-1 relative">
                     <Devlmg
-                        containerStyles='bg-about_shape_light dark:bg-about_shape_dark w-[505px] h-[505px] bg-no-repeat relative ml-8'
+                        containerStyles='bg-about_shape_light dark:bg-about_shape_dark w-[505px] h-[505px] bg-no-repeat relative '
                         imgSrc='/about/test2.webp'
                     />
                 </div>
@@ -184,7 +184,7 @@ const About = () => {
                             <TabsTrigger className='w-[162px] xl:w-auto' value="skills">Skills</TabsTrigger>
                         </TabsList>
                         {/* tabs content */}
-                        <div className="text-lg mt-12 xl:mt-8 " >
+                        <div className="text-lg mt-12 xl:mt-8" >
                             {/* personal info */}
                             <TabsContent value='personal'>
                                 <div className="text-center xl:text-left " >
