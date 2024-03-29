@@ -1,6 +1,9 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Download, Send} from 'lucide-react';
+import { Download, Send} from 'lucide-react';3
+
+
+
 
 import {
     RiFileList2Fill,
@@ -42,10 +45,12 @@ const Hero = () => {
                                 Contact me <Send size={18} />
                             </Button>
                         </Link>
-                        <Button variant='secondary' className='gap-x-2' >
+                        <a href='/Resume.pdf' download="resume.pdf" target="_blank" className='w-full md:w-auto'>
+                            <Button variant='secondary' className='gap-x-2'>
                                 Download CV
                                 <Download size={18} />
-                        </Button>
+                            </Button>
+                        </a>
                     </div>
                     {/* socials */}
                     <Socials
@@ -79,7 +84,7 @@ const Hero = () => {
                     badgeText='Tech Skills'
                     />
                     <div className='bg-hero_shape2_light dark:bg-hero_shape2_dark w-[500px] h-[500px] bg-no-repeat absolute -top-1 -right-2 ' ></div>
-                    <DevImg containerStyles='bg-hero_shape w-[510px] h-[462px] bg-no-repeat relative bg-bottom ' imgSrc='/hero/test2.webp' />
+                    <DevImg imgStyles='w-[500px] h-[500px] ' containerStyles='bg-hero_shape w-[510px] h-[462px] bg-no-repeat relative bg-bottom ' imgSrc='/hero/test2.webp' />
                 </div>
             </div>
             {/* icon */}

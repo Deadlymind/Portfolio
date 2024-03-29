@@ -1,22 +1,15 @@
-'use client';
+'use client'
 
-import Image from 'next/image';
-import Link from 'next/link';
+import React, { useState } from 'react';
+import BlogCard from '@/components/BlogCard';
 
-
-import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-
-
-// import swiper react components
+// Import Swiper components and styles
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-
-// import swiper styles
+import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-// import required modules
-import { Pagination } from 'swiper/modules';
+
 
 const blogData = [
     {
@@ -59,56 +52,68 @@ const blogData = [
 
 ]
 
-
-
-
 const Blog = () => {
     return (
-    <section className="mb-12 xl:mb-32 " >
-        <div className="container mx-auto">
-            <h2 className='section-title mb-12 text-denter mx-auto ' > My Blog</h2>
-            {/* slider */}
-            <Swiper
-                slidesPerView={1}
-                breakpoints={{
-                    640: { slidesPerView: 2 },
-                    1400: { slidesPerView: 3 },
-                }}
-                spaceBetween={30}
-                modules={[Pagination]}
-                pagination={{ clickable: true }}
-                className="h-[350px]  "
+        <section className="mb-12 xl:mb-32" >
+            <div className="container mx-auto">
+                {/* slider */}
+                <div className="h-[350px] " >
+                    <Swiper
+                        className="h-[350px]"
+                        slidesPerView={1}
+                        breakpoints={{
+                            640: { slidesPerView: 2 },
+                            1400: { slidesPerView: 3 },
+                        }}
+                        spaceBetween={30}
+                        modules={[Pagination]}
+                        pagination={{ clickable: true }}
+                    >
 
-            >
-                {blogData.map((post, index) => {
-                    return (
-                        <SwiperSlide key={index}>
-                            <Link href={post.link}>
-                                <div className="cursor-pointer">
-                                    <Card className="bg-tertiary dark:bg-secondary/40 p-8 min-h-[300px]">
-                                        <CardHeader className="p-4 mb-1">
-                                            <div className="flex items-center gap-x-4">
-                                                {/* image */}
-                                                <Image src={post.imagePath} alt={post.altText} width={70} height={70} priority />
-                                                {/* name and date */}
-                                                <div className="flex flex-col">
-                                                    <CardTitle className="text-lg font-semibold">{post.name}</CardTitle>
-                                                    <p className="text-sm text-muted-foreground">{post.author} - {post.createdAt}</p>
-                                                </div>
-                                            </div>
-                                        </CardHeader>
-                                        <CardDescription className="text-lg text-muted-foreground">{post.description}</CardDescription>
-                                    </Card>
-                                </div>
-                            </Link>
-                        </SwiperSlide>
-                    );
-                })}
+                        {blogData.map((blog, index) => {
+                            return (
+                                <SwiperSlide key={index} >
+                                    <BlogCard blog={blog} />
+                                </SwiperSlide>
+                            )
+                        })}
 
-            </Swiper>
-        </div>
-    </section>
-    );
-};
+                    </Swiper>
+                </div>
+            </div>
+        </section>
+    )
+}
 
 export default Blog
+
+
+{/*const Blog = () => {
+
+    return (
+      <section className="mb-12 xl:mb-32">
+        <div className="container mx-auto">
+          <h2 className='section-title mb-12 text-center mx-auto'>My Blog</h2>
+          <Swiper
+            slidesPerView={1}
+            breakpoints={{
+              640: { slidesPerView: 2 },
+              1400: { slidesPerView: 3 },
+            }}
+            spaceBetween={30}
+            modules={[Pagination]}
+            pagination={{ clickable: true }}
+            className="h-[350px]"
+          >
+            {filteredBlog.map((blog) => (
+              <SwiperSlide key={blog.id}>
+                <BlogCard blog={blog} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      </section>
+    );
+  };
+  
+export default Blog; */   }

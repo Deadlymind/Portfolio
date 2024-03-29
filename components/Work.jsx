@@ -94,6 +94,7 @@ const Work = () => {
                     spaceBetween={50}
                     modules={[Pagination]}
                     pagination={{ clickable: true } }
+                    style={{ height: '500px', paddingBottom: '50px' }} // Inline style for padding below swiper
 
                 >
                     {/* show only the first 4 projects for the slides */}
