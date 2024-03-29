@@ -53,7 +53,7 @@ const MyBlog = () => {
   }), [selectedCategory]);
 
   return (
-    <section>
+    <section className='flex flex-col justify-between min-h-screen'>
       <div className="container mx-auto">
         <h2 className="section-title mb-8 xl:mb-16 text-center mx-auto">My Blog</h2>
         <Tabs defaultValue={selectedCategory} onValueChange={setSelectedCategory} className='mb-24 xl:mb-48'>
@@ -65,7 +65,7 @@ const MyBlog = () => {
             ))}
           </TabsList>
           <TabsContent value={selectedCategory}>
-            <div className='text-lg xl:mt-8 grid grid-cols-1 lg:grid-cols-3 gap-4'>
+            <div className='text-lg xl:mt-8 grid grid-cols-1 lg:grid-cols-3 gap-4 '>
               {filteredBlogData.length > 0 ? (
                 filteredBlogData.map((blog) => (
                   <BlogCard blog={blog} key={blog.id} />
