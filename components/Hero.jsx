@@ -26,7 +26,7 @@ import Socials from './Socials';
 
 const Hero = () => {
     return (
-    <section className='py-12 xl:py-24 h-[84vh] xl:pt-28 bg-hero bg-no-repeat bg-bottom bg-cover dark:bg-none' >
+    <section className='py-12 xl:py-24 h-[84vh] xl:pt-28 bg-hero bg-no-repeat bg-bottom bg-cover dark:bg-none ' >
         <div className="container mx-auto">
             <div className='flex justify-between gap-x-8' >
                 {/* text */}
@@ -39,11 +39,11 @@ const Hero = () => {
                     {/* buttons */}
                     <div className='flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12 ' >
                         <Link href="/contact" >
-                            <Button className='gap-x-2' >
+                            <Button className='hidden md:inline-flex gap-x-2' >
                                 Contact me <Send size={18} />
                             </Button>
                         </Link>
-                        <a href='/Resume.pdf' download="resume.pdf" target="_blank" className='w-full md:w-auto'>
+                        <a href='/Resume.pdf' download="resume.pdf" target="_blank" className='hidden md:inline-flex w-full md:w-auto'>
                             <Button variant='secondary' className='gap-x-2'>
                                 Download CV
                                 <Download size={18} />
@@ -52,7 +52,7 @@ const Hero = () => {
                     </div>
                     {/* socials */}
                     <Socials
-                        containerStyles='flex gap-x-6 mx-auto xl:mx-0'
+                        containerStyles='hidden md:flex gap-x-6 mx-auto xl:mx-0'
                         iconStyles='text-foreground text-[22px] hover:text-primary transition-all'
                     />
                 </div>
