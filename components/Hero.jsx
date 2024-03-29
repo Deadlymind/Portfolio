@@ -32,11 +32,9 @@ const Hero = () => {
                 {/* text */}
                 <div className='flex max-w-[600px] flex-col justify-center mx-auto xl:mx-0 text-center xl:text-left ' >
                     <div className='text-sm uppercase font-semibold mb-4 text-primary tracking-[4px] ' >Software developer</div>
-                    <h1 className='h1 mb-4' >Hello, my in name is Oussama Ayari</h1>
-                    <p className='subtitle max-w-[490px] mx-auto xl:mx-0 ' >
-                        Brief description with insight into myself,
-                        my vocational journey,
-                        and what i engage in professionally.
+                    <h1 class='h1 mb-4'>Hello, My Name is Oussama Ayari</h1>
+                    <p class='subtitle max-w-[490px] mx-auto xl:mx-0'>
+                        Welcome to my personal space! Here, you'll gain insights into my journey, spanning the initial steps of my career to the professional engagements that define my daily life. Dive in to discover more about the paths I've traversed in my field, the milestones I've achieved, and the passion that drives my professional endeavors.
                     </p>
                     {/* buttons */}
                     <div className='flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12 ' >
