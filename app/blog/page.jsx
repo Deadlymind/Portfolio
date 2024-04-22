@@ -12,7 +12,7 @@ const blogData = [
     name: 'Backend Development',
     category: 'Backend',
     description: 'Explore the intricacies of server-side development and understand how backend systems work.',
-    link: '/blog/backend',
+    link: 'https://www.linkedin.com/posts/deadlymind_understand-how-backend-system-work-part-1-activity-7186217629181751296-4Uld?utm_source=share&utm_medium=member_desktop',
     createdAt: '2024-03-26',
     author: 'Deadlymind',
     tags: ['Development', 'Backend', 'Programming']
