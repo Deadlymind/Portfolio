@@ -41,6 +41,18 @@ const blogData = [
     author: 'Deadlymind',
     tags: ['Development', 'Full Stack', 'Web Applications']
   },
+  {
+    id: 4,
+    imagePath: '/blog/mernf.png',
+    altText: 'MERN STACK',
+    name: 'MERN STACK',
+    category: 'Full Stack',
+    description: 'Mastering the MERN Stack Essentials for Developing Scalable and Dynamic Web Applications',
+    link: 'https://www.linkedin.com/feed/update/urn:li:activity:7188400972086312960/',
+    createdAt: '2024-04-23',
+    author: 'Deadlymind',
+    tags: ['Development', 'Full Stack', 'Web Applications']
+  },
 ];
 
 const uniqueCategories = ['all articles', ...new Set(blogData.map((item) => item.category))];
